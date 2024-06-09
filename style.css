@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #0c7a90; */
+    /* background: linear-gradient(315deg, #4c5152 0%, #292929 100%); */
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+
+}
+
+.container{
+    width: 80%;
+    max-width: 750px;
+    min-width: 300px;
+    /* background: #4c5152; */
+    background-color: #0c7a90;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+                15px 15px 15px rgba(0, 0, 0, 0.1),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+                inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+    border-radius: 8px;
+    padding: 30px;
+
+}
+
+.wrapper{
+    border-radius: 5px;
+    border: 1px solid #bbb;
+}
+
+.text-input{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #bbb;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.text-input textarea{
+    height: 250px;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-image: linear-gradient(115deg, #f5f7fa 0%, #c3cfe2 100%);
+    border: none;
+    outline: none;
+    resize: none;
+    border-radius: 4px;
+}
+.text-input .from-text{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.text-input .to-text{
+    /* border-left: 1px solid #bbb;
+    border-top-left-radius: 0px; */
+    border-top: 1px solid #bbb;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.controls, li, .icons i{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.from{
+     flex-direction: row-reverse; 
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.controls{
+    list-style: none;
+    padding: 15px;
+}
+
+.controls .row.to .icons,
+.controls .row.from .icons{
+    padding-left: 15px;
+    border-left:1px solid #bbb ;
+}
+
+.controls .icons i{
+    /* color:  #3b3b3b; */
+    color: white;
+    width: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.controls .row select{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+}
+
+.controls .icons{
+    width: 40%;
+}
+
+.exchange{
+    /* color: #3b3b3b; */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.container button{
+    cursor: pointer;
+    width: 100%;
+    margin-top: 16px;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    background-color: #cacfe9;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-out;
+    /* filter: drop-shadow(2px 2px 2px #414142); */
+    /* box-shadow: 15px 15px 15px rgba(255, 255, 255, 0.2),
+                -15px -15px 15px rgba(0, 0, 0, 0.1),
+                inset 5px 5px 5px rgba(255, 255, 255, 0.2),
+                inset -5px -5px 5px rgba(0, 0, 0, 0.1); */
+    box-shadow: inset 0px -8px rgba(0, 0, 0, 0.2),
+                1px 1px 0 0 #384b61,
+                2px 2px 0 0 #384b61,
+                3px 3px 0 0 #384b61,
+                4px 4px 0 0 #384b61,
+                5px 5px 0 0 #384b61,
+                6px 6px 0 0 #384b61,
+                7px 7px 0 0 #384b61,
+                8px 8px 0 0 #384b61;
+}
+
+.container button:active{
+    box-shadow: inset 0px -4px rgba(0, 0, 0, 0.2),
+                1px 1px 0 0 #384b61,
+                2px 2px 0 0 #384b61,
+                3px 3px 0 0 #384b61,
+                4px 4px 0 0 #384b61;
+}
+
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (min-width:768px) {
+
+    .text-input{
+        flex-direction: row;
+    }
+
+    .controls, li, .icons, .icons i{
+        flex-direction: row;
+    }
+
+    .controls{
+        padding: 12px 15px;
+    }
+    
+    .text-input .to-text{
+        border-left: 1px solid #bbb;
+        border-top-left-radius: 0px;
+    }
+    
+    .controls .row select{
+        font-size: 18px;
+    }
+    .from{
+        flex-direction: row;
+    }
+    .controls .row.from .icons{
+        padding-right: 15px;
+        border-right:1px solid #bbb ;
+        border-left: none;
+    }
+}
